@@ -16,9 +16,9 @@ while(True):
     if w1 == "q":
         break
     print(f'{w1}と'+f'{ans}の違い')
-    a = model.similarity(w1, ans)
+    target = model.similarity(w1, ans)
     end2 = time.time()
-    print(str(a*100/2+50)+"%")
+    print(str(target*100/2+50)+"%")
     print("所要時間(比較): "+ str(end2-start1))
 
 print("所要時間(モデルダウンロード): "+ str(end-start))
